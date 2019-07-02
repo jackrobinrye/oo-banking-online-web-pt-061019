@@ -1,3 +1,5 @@
+require "pry"
+
 class Transfer
 
   attr_reader :sender, :receiver, :amount
@@ -19,8 +21,9 @@ class Transfer
   end
 
   def execute_transaction
+    binding.pry
     if @sender.valid? == false
-      return "Transaction rejected. Please check your account balance."
+      "Transaction rejected. Please check your account balance."
     elsif @status != "complete"
       @receiver.balance += @amount
       @sender.balance -= @amount
