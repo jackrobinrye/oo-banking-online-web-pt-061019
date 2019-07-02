@@ -17,12 +17,12 @@ class BankAccount
     "Your balance is $#{balance}."
   end
 
-  def valid? 
+  def valid?
     if status == open && balance > 0
-      true 
-    else 
-      false 
-    end 
-  end 
+      true
+    else
+      false
+    end
+  end
 
 end
